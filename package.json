@@ -1,6 +1,8 @@
 {
   "name": "virtual-keyboard",
-  "scripts": {},
+  "scripts": {
+    "build": "webpack"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ALLaTk/virtual-keyboard.git"
