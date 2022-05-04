@@ -1,0 +1,16 @@
+{
+  "name": "virtual-keyboard",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ALLaTk/virtual-keyboard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ALLaTk/virtual-keyboard/issues"
+  },
+  "homepage": "https://github.com/ALLaTk/virtual-keyboard#readme",
+  "devDependencies": {
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
