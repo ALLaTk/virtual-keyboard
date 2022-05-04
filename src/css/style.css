@@ -92,3 +92,90 @@ body {
 }
 
 
+.keyboard {
+  margin: 0 auto;
+  width: 870px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 8px;
+  background-color: #c4baba;
+  padding: 6px;
+}
+
+.row{
+  display: flex;
+  justify-content: center;
+}
+
+.key{
+  border-radius: 5px;
+  font-size: 25px;
+  font-weight: 400px;
+  color: #ffffff;
+  width: 55px;
+  height: 55px;
+  margin: 2px;
+  background-color: rgb(111 126 153);
+  padding: 0px;
+  cursor: pointer;
+}
+
+.key:hover {
+  background: #b5c3e2;
+  transition: 0.5s;
+}
+
+.key_backspace, 
+.key_tab {
+  width:  83px;
+  background-color: rgb(39 45 56);
+  font-weight: 100;
+  font-size: 17px;
+}
+
+.key_capslock,
+.key_enter {
+  width: 100px;
+  background-color: rgb(39 45 56);
+  font-weight: 100;
+  font-size: 17px;
+}
+
+.key_leftshift{
+  width: 145px;
+  background-color: rgb(39 45 56);
+  font-weight: 100;
+  font-size: 17px;
+}
+
+.key_rightshift{
+  width: 55px;
+  background-color: rgb(39 45 56);
+  font-weight: 100;
+  font-size: 17px;
+}
+
+.key_leftctrl,
+.key_rightctrl {
+  width: 80px;
+  background-color: rgb(39 45 56);
+  font-weight: 100;
+  font-size: 17px;
+}
+
+
+.key_leftalt,
+.key_rightalt {
+  background-color: rgb(39 45 56);
+  font-weight: 100;
+  font-size: 17px;
+}
+
+.key_space {
+  width: 330px;
+  background-color: rgb(39 45 56);
+  font-weight: 100;
+  font-size: 17px;
+}
