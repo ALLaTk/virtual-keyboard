@@ -60,13 +60,13 @@ body {
  margin: 0 auto;
  display: block;
  flex-direction:  column;
+ color: #161169;
 }
 
 .titlle {
  text-align: center;
  font-size: 54px;
  line-height: 40px;
- letter-spacing: 1.5px;
 }
 
 .subtitlle{
@@ -78,13 +78,13 @@ body {
   padding-bottom: 5px;
 }
 
-.textarea__content {
+.text__content {
   display: block;
   width: 870px;
   height: 190px;
   margin: 0px auto 10px;
   border-radius: 10px;
-  color: #333;
+  color: #000000;
   font-size: 20px;
   padding: 15px;
   resize: none;
@@ -117,20 +117,20 @@ body {
   width: 55px;
   height: 55px;
   margin: 2px;
-  background-color: rgb(111 126 153);
+  background: rgb(111 126 153);
   padding: 0px;
   cursor: pointer;
 }
 
 .key:hover {
-  background: #b5c3e2;
-  transition: 0.5s;
+  background: #55fccb6b;
+  border-radius: 10px;
 }
 
 .key_backspace, 
 .key_tab {
   width:  83px;
-  background-color: rgb(39 45 56);
+  background: rgb(39 45 56);
   font-weight: 100;
   font-size: 17px;
 }
@@ -138,21 +138,21 @@ body {
 .key_capslock,
 .key_enter {
   width: 100px;
-  background-color: rgb(39 45 56);
+  background: rgb(39 45 56);
   font-weight: 100;
   font-size: 17px;
 }
 
 .key_leftshift{
   width: 145px;
-  background-color: rgb(39 45 56);
+  background: rgb(39 45 56);
   font-weight: 100;
   font-size: 17px;
 }
 
 .key_rightshift{
   width: 55px;
-  background-color: rgb(39 45 56);
+  background: rgb(39 45 56);
   font-weight: 100;
   font-size: 17px;
 }
@@ -160,7 +160,7 @@ body {
 .key_leftctrl,
 .key_rightctrl {
   width: 80px;
-  background-color: rgb(39 45 56);
+  background: rgb(39 45 56);
   font-weight: 100;
   font-size: 17px;
 }
@@ -168,14 +168,15 @@ body {
 
 .key_leftalt,
 .key_rightalt {
-  background-color: rgb(39 45 56);
+  background: rgb(39 45 56);
   font-weight: 100;
   font-size: 17px;
 }
 
 .key_space {
   width: 330px;
-  background-color: rgb(39 45 56);
+  /* background: radial-gradient(121.86% 129.81% at -10.89% 0%, rgb(99 114 140) 0%, #2f4b7b 16.75%, #C3CFE6 99.25%, rgb(89 116 149) 135%); */
+  background: rgb(39 45 56);
   font-weight: 100;
   font-size: 17px;
 }

@@ -4,6 +4,6 @@ import createKeyboard from './js/keyBoard.js';
 
 window.onload = () => {
   createHead();
-  createTextarea();
-  createKeyboard();
+  const text = createTextarea();
+  createKeyboard(text);
 };
