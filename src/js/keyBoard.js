@@ -17,6 +17,17 @@ class KeyBoard extends Control {
             this.textarea.element.value += event.target.textContent;
           }
         });
+        document.addEventListener('keydown', (event) => {
+          this.textarea.element.focus();
+          if (event.code === el.code) {
+            element.classList.add('active');
+          }
+        });
+        document.addEventListener('keyup', (event) => {
+          if (event.code === el.code) {
+            element.classList.remove('active');
+          }
+        });
       });
     }
   }

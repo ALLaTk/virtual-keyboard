@@ -122,6 +122,11 @@ body {
   cursor: pointer;
 }
 
+.key.active{
+  background-color: #55fccb6b;
+  border-radius: 10px;
+}
+
 .key:hover {
   background: #55fccb6b;
   border-radius: 10px;
