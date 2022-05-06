@@ -50,7 +50,7 @@ a {
 
 body {
   min-height: 100vh;
-  font-family: "Roboto";
+  font-family: "Arial";
   /* background-color: #e6e6e6; */
 }
 
@@ -122,7 +122,7 @@ body {
   cursor: pointer;
 }
 
-.key.active{
+.key.active, .key.capslk {
   background-color: #55fccb6b;
   border-radius: 10px;
 }
@@ -137,7 +137,7 @@ body {
   width:  83px;
   background: rgb(39 45 56);
   font-weight: 100;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .key_capslock,
