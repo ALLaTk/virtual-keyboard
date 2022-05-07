@@ -51,7 +51,6 @@ a {
 body {
   min-height: 100vh;
   font-family: "Arial";
-  /* background-color: #e6e6e6; */
 }
 
 .header {
@@ -65,15 +64,15 @@ body {
 
 .titlle {
  text-align: center;
- font-size: 54px;
+ font-size: 45px;
  line-height: 40px;
 }
 
-.subtitlle{
+.subtitlle {
   text-align: right;
 }
 
-.subtitlle_second{
+.subtitlle_second {
   font-size: 20px;
   padding-bottom: 5px;
 }
@@ -93,8 +92,7 @@ body {
 
 
 .keyboard {
-  margin: 0 auto;
-  width: 870px;
+  width: 875px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -104,12 +102,12 @@ body {
   padding: 6px;
 }
 
-.row{
+.row {
   display: flex;
   justify-content: center;
 }
 
-.key{
+.key {
   border-radius: 5px;
   font-size: 25px;
   font-weight: 400px;
@@ -120,6 +118,7 @@ body {
   background: rgb(111 126 153);
   padding: 0px;
   cursor: pointer;
+  border-color: rgb(89 116 149);
 }
 
 .key.active, .key.capslk {
@@ -133,55 +132,49 @@ body {
 }
 
 .key_backspace, 
-.key_tab {
-  width:  83px;
+.key_tab,
+.key_capslock,
+.key_enter,
+.key_leftshift,
+.key_rightshift,
+.key_del,
+.key_leftctrl,
+.key_rightctrl,
+.key_win,
+.key_leftalt,
+.key_rightalt,
+.key_space {
   background: rgb(39 45 56);
   font-weight: 100;
-  font-size: 15px;
+  font-size: 17px;
+}
+
+.key_backspace{
+  width: 150px;
+}
+
+.key_tab {
+  width: 70px;
 }
 
 .key_capslock,
 .key_enter {
-  width: 100px;
-  background: rgb(39 45 56);
-  font-weight: 100;
-  font-size: 17px;
+  width: 130px;
 }
 
-.key_leftshift{
-  width: 145px;
-  background: rgb(39 45 56);
-  font-weight: 100;
-  font-size: 17px;
+.key_leftshift {
+  width: 135px;
 }
 
-.key_rightshift{
-  width: 55px;
-  background: rgb(39 45 56);
-  font-weight: 100;
-  font-size: 17px;
+.key_rightshift {
+  width: 113px;
 }
 
-.key_leftctrl,
-.key_rightctrl {
+.key_leftctrl {
   width: 80px;
-  background: rgb(39 45 56);
-  font-weight: 100;
-  font-size: 17px;
 }
 
-
-.key_leftalt,
-.key_rightalt {
-  background: rgb(39 45 56);
-  font-weight: 100;
-  font-size: 17px;
-}
 
 .key_space {
-  width: 330px;
-  /* background: radial-gradient(121.86% 129.81% at -10.89% 0%, rgb(99 114 140) 0%, #2f4b7b 16.75%, #C3CFE6 99.25%, rgb(89 116 149) 135%); */
-  background: rgb(39 45 56);
-  font-weight: 100;
-  font-size: 17px;
+  width: 420px;
 }

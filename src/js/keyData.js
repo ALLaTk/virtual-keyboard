@@ -86,6 +86,9 @@ const keyData = [
     {
       key: { ru: '\\', en: '\\' }, shift: { ru: '|', en: '|' }, code: 'Backslash', class: 'key key_backslash',
     },
+    {
+      key: { ru: 'Del', en: 'Del' }, code: 'Delete', class: 'key key_del',
+    },
   ],
   [ // row 3
     {
@@ -169,31 +172,32 @@ const keyData = [
       key: { ru: 'Shift', en: 'Shift' }, code: 'ShiftRight', class: 'key key_rightshift', noType: true,
     },
   ],
-  [{
-    key: { ru: '🇷🇺', en: '🇺🇸' }, code: 'Lang', class: 'key key_lang', noType: true,
-  },
-  {
-    key: { ru: 'Cntrl', en: 'Cntrl' }, code: 'ControlLeft', class: 'key key_leftctrl', noType: true,
-  },
-  {
-    key: { ru: 'Alt', en: 'Alt' }, code: 'AltLeft', class: 'key key_leftalt', noType: true,
-  },
-  { key: { ru: ' ', en: ' ' }, code: 'Space', class: 'key key_space' },
-  {
-    key: { ru: 'Alt', en: 'Alt' }, code: 'AltRight', class: 'key key_rightalt', noType: true,
-  },
-  {
-    key: { ru: 'Cntrl', en: 'Cntrl' }, code: 'ControlRight', class: 'key key_rightctrl', noType: true,
-  },
-  {
-    key: { ru: '◄', en: '◄' }, code: 'ArrowLeft', noType: true, class: 'key',
-  },
-  {
-    key: { ru: '▼', en: '▼' }, code: 'ArrowDown', noType: true, class: 'key',
-  },
-  {
-    key: { ru: '►', en: '►' }, code: 'ArrowRight', noType: true, class: 'key',
-  },
+  [
+    {
+      key: { ru: 'Cntrl', en: 'Cntrl' }, code: 'ControlLeft', class: 'key key_leftctrl', noType: true,
+    },
+    {
+      key: { ru: 'Win', en: 'Win' }, code: 'MetaLeft', class: 'key key_win', noType: true,
+    },
+    {
+      key: { ru: 'Alt', en: 'Alt' }, code: 'AltLeft', class: 'key key_leftalt', noType: true,
+    },
+    { key: { ru: ' ', en: ' ' }, code: 'Space', class: 'key key_space' },
+    {
+      key: { ru: 'Alt', en: 'Alt' }, code: 'AltRight', class: 'key key_rightalt', noType: true,
+    },
+    {
+      key: { ru: '◄', en: '◄' }, code: 'ArrowLeft', noType: true, class: 'key',
+    },
+    {
+      key: { ru: '▼', en: '▼' }, code: 'ArrowDown', noType: true, class: 'key',
+    },
+    {
+      key: { ru: '►', en: '►' }, code: 'ArrowRight', noType: true, class: 'key',
+    },
+    {
+      key: { ru: 'Cntrl', en: 'Cntrl' }, code: 'ControlRight', class: 'key key_rightctrl', noType: true,
+    },
   ],
 ];
 
