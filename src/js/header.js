@@ -7,7 +7,7 @@ class Header extends Control {
     this.titlle.element.textContent = 'Virtual Keyboard';
     this.subtitlle = new Control(this.element, 'h2', 'subtitlle');
     this.subtitlle.element.textContent = 'for Windows OS';
-    this.subtitlle_second = new Control(this.element, 'h2', 'subtitlle_second');
+    this.subtitlle_second = new Control(this.element, 'h3', 'subtitlle_second');
     this.subtitlle_second.element.textContent = 'Change launguages';
   }
 }

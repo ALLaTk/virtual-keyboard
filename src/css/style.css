@@ -83,11 +83,12 @@ body {
   height: 190px;
   margin: 0px auto 10px;
   border-radius: 10px;
-  color: #000000;
   font-size: 20px;
   padding: 15px;
   resize: none;
   overflow: auto;
+  outline: none;
+  border: 2px solid;
 }
 
 
@@ -100,6 +101,7 @@ body {
   border-radius: 8px;
   background-color: #c4baba;
   padding: 6px;
+  border: 2px solid;
 }
 
 .row {
@@ -109,8 +111,8 @@ body {
 
 .key {
   border-radius: 5px;
-  font-size: 25px;
-  font-weight: 400px;
+  font-size: 20px;
+  font-weight: 100px;
   color: #ffffff;
   width: 55px;
   height: 55px;
@@ -123,12 +125,19 @@ body {
 
 .key.active, .key.capslk {
   background-color: #55fccb6b;
-  border-radius: 10px;
+  border-radius: 15px;
+  transition: all ease-in-out .1s; 
+}
+
+.key:active {
+  background-color: #55fccb6b;
+  border-radius: 15px;
+  transition: all ease-in-out .1s;
 }
 
 .key:hover {
-  background: #55fccb6b;
-  border-radius: 10px;
+  background-color: #55fccb6b; 
+  transition: all ease-in-out .1s;
 }
 
 .key_backspace, 
@@ -145,7 +154,6 @@ body {
 .key_rightalt,
 .key_space {
   background: rgb(39 45 56);
-  font-weight: 100;
   font-size: 17px;
 }
 
