@@ -1,5 +1,5 @@
-import Control from './control';
-import keyData from './keyData';
+import Control from './control.js';
+import keyData from './keyData.js';
 
 class KeyBoard extends Control {
   constructor(parent, text) {

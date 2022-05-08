@@ -1,4 +1,4 @@
-import keyData from './keyData';
+import keyData from './keyData.js';
 
 const changeLanguage = () => {
   const rows = [...document.querySelectorAll('.row')];

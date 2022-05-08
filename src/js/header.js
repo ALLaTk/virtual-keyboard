@@ -1,4 +1,4 @@
-import Control from './control';
+import Control from './control.js';
 
 class Header extends Control {
   constructor(parent) {
