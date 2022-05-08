@@ -1,5 +1,6 @@
 import Control from './control.js';
 import keyData from './keyData.js';
+import { lang } from './changeLanguage.js';
 
 class KeyBoard extends Control {
   constructor(parent, text) {
@@ -12,7 +13,9 @@ class KeyBoard extends Control {
       keyData[i].forEach((el) => {
         const { element } = new Control(this.row.element, 'button', el.class);
 
-        element.textContent = el.key.en;
+        if (lang === 'en') {
+          element.textContent = el.key.en;
+        } else element.textContent = el.key.ru;
 
         element.addEventListener('click', (event) => {
           let cursor = this.textarea.element.selectionStart;
@@ -58,6 +61,16 @@ class KeyBoard extends Control {
           }
         });
 
+        element.addEventListener('mousedown', (event) => {
+          if (event.target.classList.contains('key_leftshift') || event.target.classList.contains('key_rightshift')) {
+            element.classList.add('shift');
+          }
+        });
+        element.addEventListener('mouseup', (event) => {
+          if (event.target.classList.contains('key_leftshift') || event.target.classList.contains('key_rightshift')) {
+            element.classList.remove('shift');
+          }
+        });
         document.addEventListener('keydown', (event) => {
           let cursor = this.textarea.element.selectionStart;
 
