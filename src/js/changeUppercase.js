@@ -1,4 +1,4 @@
-const changeСase = () => {
+const changeUppercase = () => {
   const btnKeys = [...document.querySelectorAll('.key')];
   const btnKey = document.querySelector('.keyboard');
   const caps = document.querySelector('.key_capslock');
@@ -29,4 +29,4 @@ const changeСase = () => {
     });
   });
 };
-export default changeСase;
+export default changeUppercase;

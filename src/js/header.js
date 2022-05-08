@@ -1,4 +1,4 @@
-import Control from './control.js';
+import Control from './control';
 
 class Header extends Control {
   constructor(parent) {
@@ -8,7 +8,7 @@ class Header extends Control {
     this.subtitlle = new Control(this.element, 'h2', 'subtitlle');
     this.subtitlle.element.textContent = 'for Windows OS';
     this.subtitlle_second = new Control(this.element, 'h3', 'subtitlle_second');
-    this.subtitlle_second.element.textContent = 'Change launguages';
+    this.subtitlle_second.element.textContent = 'Change launguages: left Alt + left Ctrl';
   }
 }
 

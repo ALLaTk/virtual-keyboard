@@ -1,9 +1,11 @@
-import createHead from './js/header.js';
-import createTextarea from './js/textarea.js';
-import createKeyboard from './js/keyBoard.js';
-import changeСase from './js/changeCase.js';
+import createHead from './js/header';
+import createTextarea from './js/textarea';
+import createKeyboard from './js/keyBoard';
+import changeUppercase from './js/changeUppercase';
+import changeLanguage from './js/changeLanguage';
 
 createHead();
 const text = createTextarea();
 createKeyboard(text);
-changeСase();
+changeUppercase();
+changeLanguage();

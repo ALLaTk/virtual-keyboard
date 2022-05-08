@@ -1,5 +1,5 @@
-import Control from './control.js';
-import keyData from './keyData.js';
+import Control from './control';
+import keyData from './keyData';
 
 class KeyBoard extends Control {
   constructor(parent, text) {
@@ -10,9 +10,9 @@ class KeyBoard extends Control {
       this.row = new Control(this.element, 'div', 'row');
 
       keyData[i].forEach((el) => {
-        const { element } = new Control(this.row.element, 'button', `${el.class}`);
+        const { element } = new Control(this.row.element, 'button', el.class);
 
-        element.textContent = `${el.key.en}`;
+        element.textContent = el.key.en;
 
         element.addEventListener('click', (event) => {
           let cursor = this.textarea.element.selectionStart;
@@ -53,55 +53,50 @@ class KeyBoard extends Control {
             this.textarea.element.value = `${strLeft}    ${strRight}`;
             str.setSelectionRange(cursor, cursor);
           }
-        });
-        element.addEventListener('click', (event) => {
           if (event.target.classList.contains('key_capslock')) {
             element.classList.toggle('capslk');
           }
         });
 
         document.addEventListener('keydown', (event) => {
-          let cursorTab = this.textarea.element.selectionStart;
+          let cursor = this.textarea.element.selectionStart;
 
-          const strTab = this.textarea.element;
-          const strLeftTab = this.textarea.element.value.slice(0, cursorTab);
-          const strRightTab = this.textarea.element.value.slice(cursorTab);
+          const str = this.textarea.element;
+          const strLeft = this.textarea.element.value.slice(0, cursor);
+          const strRight = this.textarea.element.value.slice(cursor);
+          this.textarea.element.focus();
+
+          if (event.code === el.code) {
+            element.classList.add('active');
+          }
+          if (event.code === el.code && element.textContent.length === 1) {
+            event.preventDefault();
+            if (cursor === str.value.length) {
+              this.textarea.element.value += element.textContent;
+            } else {
+              cursor += 1;
+              this.textarea.element.value = `${strLeft}${element.textContent}${strRight}`;
+              str.setSelectionRange(cursor, cursor);
+            }
+          }
           if (event.code === 'Tab' && el.code === 'Tab') {
             event.preventDefault();
-            cursorTab += 4;
-            this.textarea.element.value = `${strLeftTab}    ${strRightTab}`;
-            strTab.setSelectionRange(cursorTab, cursorTab);
+            cursor += 4;
+            this.textarea.element.value = `${strLeft}    ${strRight}`;
+            str.setSelectionRange(cursor, cursor);
           }
-        });
-
-        document.addEventListener('keydown', (event) => {
-          let cursorArrow = this.textarea.element.selectionStart;
-
-          const strArrow = this.textarea.element;
-          const strLeftArrow = this.textarea.element.value.slice(0, cursorArrow);
-          const strRightArrow = this.textarea.element.value.slice(cursorArrow);
           if ((event.code === 'ArrowUp' && el.code === 'ArrowUp')
              || (event.code === 'ArrowLeft' && el.code === 'ArrowLeft')
              || (event.code === 'ArrowDown' && el.code === 'ArrowDown')
              || (event.code === 'ArrowRight' && el.code === 'ArrowRight')) {
             event.preventDefault();
-            cursorArrow += 1;
+            cursor += 1;
 
-            this.textarea.element.value = `${strLeftArrow}${element.textContent}${strRightArrow}`;
-            strArrow.setSelectionRange(cursorArrow, cursorArrow);
+            this.textarea.element.value = `${strLeft}${element.textContent}${strRight}`;
+            str.setSelectionRange(cursor, cursor);
           }
-        });
-
-        document.addEventListener('keydown', (event) => {
           if (event.code === 'CapsLock' && el.code === 'CapsLock') {
             element.classList.toggle('capslk');
-          }
-        });
-
-        document.addEventListener('keydown', (event) => {
-          this.textarea.element.focus();
-          if (event.code === el.code) {
-            element.classList.add('active');
           }
         });
         document.addEventListener('keyup', (event) => {
