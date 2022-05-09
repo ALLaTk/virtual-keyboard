@@ -4,6 +4,8 @@ const data = {
   lang: 'ru',
 };
 
+JSON.parse('null')?.lang || 'en';
+
 if (JSON.parse(localStorage.getItem('lang')).lang === 'ru') {
   data.lang = 'ru';
 } else {
