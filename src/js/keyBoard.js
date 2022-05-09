@@ -1,6 +1,6 @@
 import Control from './control.js';
 import keyData from './keyData.js';
-import { data } from './getLocalStorage.js';
+import data from './getLocalStorage.js';
 
 class KeyBoard extends Control {
   constructor(parent, text) {

@@ -1,6 +1,6 @@
 import keyData from './keyData.js';
 
-export const data = {
+const data = {
   lang: null,
 };
 
@@ -10,7 +10,7 @@ if (JSON.parse(localStorage.getItem('lang')).lang === 'ru') {
   data.lang = 'en';
 }
 
-export const getLocalStorage = () => {
+const getLocalStorage = () => {
   const rows = [...document.querySelectorAll('.row')];
   if (localStorage.getItem('lang')) {
     const { lang } = JSON.parse(localStorage.getItem('lang'));
@@ -31,10 +31,12 @@ export const getLocalStorage = () => {
 };
 window.addEventListener('load', getLocalStorage);
 
-export const setLocalStorage = () => {
+const setLocalStorage = () => {
   const set = JSON.stringify({
     lang: data.lang,
   });
   localStorage.setItem('lang', set);
 };
 window.addEventListener('beforeunload', setLocalStorage);
+
+export default data;

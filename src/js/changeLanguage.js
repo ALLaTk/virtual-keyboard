@@ -1,5 +1,5 @@
 import keyData from './keyData.js';
-import { data } from './getLocalStorage.js';
+import data from './getLocalStorage.js';
 
 const changeLanguage = () => {
   const rows = [...document.querySelectorAll('.row')];
