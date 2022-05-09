@@ -1,6 +1,5 @@
 import Control from './control.js';
 import keyData from './keyData.js';
-import data from './getLocalStorage.js';
 
 class KeyBoard extends Control {
   constructor(parent, text) {
@@ -13,7 +12,7 @@ class KeyBoard extends Control {
       keyData[i].forEach((el) => {
         const { element } = new Control(this.row.element, 'button', el.class);
 
-        element.textContent = el.key[data.lang];
+        element.textContent = el.key.en;
 
         element.addEventListener('click', (event) => {
           let cursor = this.textarea.element.selectionStart;
