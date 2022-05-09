@@ -17,6 +17,7 @@ class KeyBoard extends Control {
 
         element.addEventListener('click', (event) => {
           let cursor = this.textarea.element.selectionStart;
+          const cursorEnd = this.textarea.element.selectionEnd;
           const str = this.textarea.element;
           const strLeft = this.textarea.element.value.slice(0, cursor);
           const strRight = this.textarea.element.value.slice(cursor);
@@ -39,14 +40,25 @@ class KeyBoard extends Control {
           }
 
           if (el.code === 'Backspace') {
-            cursor -= 1;
-            this.textarea.element.value = `${strLeft.slice(0, -1)}${strRight}`;
-            str.setSelectionRange(cursor, cursor);
+            if (cursor === cursorEnd) {
+              cursor -= 1;
+              this.textarea.element.value = `${strLeft.slice(0, -1)}${strRight}`;
+              str.setSelectionRange(cursor, cursor);
+            } else {
+              this.textarea.element.value = `${strLeft}${strRight.slice(cursorEnd - cursor)}`;
+
+              str.setSelectionRange(cursor, cursor);
+            }
           }
 
           if (el.code === 'Delete') {
-            this.textarea.element.value = `${strLeft}${strRight.slice(1)}`;
-            str.setSelectionRange(cursor, cursor);
+            if (cursor === cursorEnd) {
+              this.textarea.element.value = `${strLeft}${strRight.slice(1)}`;
+              str.setSelectionRange(cursor, cursor);
+            } else {
+              this.textarea.element.value = `${strLeft}${strRight.slice(cursorEnd - cursor)}`;
+              str.setSelectionRange(cursor, cursor);
+            }
           }
 
           if (el.code === 'Tab') {

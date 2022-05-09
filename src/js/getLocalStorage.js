@@ -1,7 +1,7 @@
 import keyData from './keyData.js';
 
 const data = {
-  lang: null,
+  lang: 'ru',
 };
 
 if (JSON.parse(localStorage.getItem('lang')).lang === 'ru') {
