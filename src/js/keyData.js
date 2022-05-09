@@ -40,12 +40,12 @@ const keyData = [
       key: { ru: '=', en: '=' }, shift: { ru: '+', en: '+' }, code: 'Equal', class: 'key',
     },
     {
-      key: { ru: 'Backspace', en: 'Backspace' }, code: 'Backspace', class: 'key key_backspace', noType: true,
+      key: { ru: 'Backspace', en: 'Backspace' }, code: 'Backspace', class: 'key key_backspace',
     },
   ],
   [ // row 2
     {
-      key: { ru: 'Tab', en: 'Tab' }, code: 'Tab', class: 'key key_tab', noType: true,
+      key: { ru: 'Tab', en: 'Tab' }, code: 'Tab', class: 'key key_tab',
     },
     {
       key: { ru: 'й', en: 'q' }, shift: { ru: 'Й', en: 'Q' }, code: 'KeyQ', class: 'key',
@@ -92,7 +92,7 @@ const keyData = [
   ],
   [ // row 3
     {
-      key: { ru: 'CapsLk', en: 'CapsLk' }, code: 'CapsLock', class: 'key key_capslock', noType: true,
+      key: { ru: 'CapsLk', en: 'CapsLk' }, code: 'CapsLock', class: 'key key_capslock',
     },
     {
       key: { ru: 'ф', en: 'a' }, shift: { ru: 'Ф', en: 'A' }, code: 'KeyA', class: 'key',
@@ -128,12 +128,12 @@ const keyData = [
       key: { ru: 'э', en: '\'' }, shift: { ru: 'Э', en: '"' }, code: 'Quote', class: 'key',
     },
     {
-      key: { ru: 'Enter', en: 'Enter' }, code: 'Enter', class: 'key key_enter', noType: true,
+      key: { ru: 'Enter', en: 'Enter' }, code: 'Enter', class: 'key key_enter',
     },
   ],
   [ // row 4
     {
-      key: { ru: 'Shift', en: 'Shift' }, code: 'ShiftLeft', class: 'key key_leftshift', noType: true,
+      key: { ru: 'Shift', en: 'Shift' }, code: 'ShiftLeft', class: 'key key_leftshift',
     },
     {
       key: { ru: 'я', en: 'z' }, shift: { ru: 'Я', en: 'Z' }, code: 'KeyZ', class: 'key',
@@ -166,37 +166,37 @@ const keyData = [
       key: { ru: '.', en: '/' }, shift: { ru: ',', en: '?' }, code: 'Slash', class: 'key',
     },
     {
-      key: { ru: '▲', en: '▲' }, code: 'ArrowUp', noType: true, class: 'key',
+      key: { ru: '▲', en: '▲' }, code: 'ArrowUp', class: 'key',
     },
     {
-      key: { ru: 'Shift', en: 'Shift' }, code: 'ShiftRight', class: 'key key_rightshift', noType: true,
+      key: { ru: 'Shift', en: 'Shift' }, code: 'ShiftRight', class: 'key key_rightshift',
     },
   ],
   [
     {
-      key: { ru: 'Cntrl', en: 'Cntrl' }, code: 'ControlLeft', class: 'key key_leftctrl', noType: true,
+      key: { ru: 'Cntrl', en: 'Cntrl' }, code: 'ControlLeft', class: 'key key_leftctrl',
     },
     {
-      key: { ru: 'Win', en: 'Win' }, code: 'MetaLeft', class: 'key key_win', noType: true,
+      key: { ru: 'Win', en: 'Win' }, code: 'MetaLeft', class: 'key key_win',
     },
     {
-      key: { ru: 'Alt', en: 'Alt' }, code: 'AltLeft', class: 'key key_leftalt', noType: true,
+      key: { ru: 'Alt', en: 'Alt' }, code: 'AltLeft', class: 'key key_leftalt',
     },
     { key: { ru: ' ', en: ' ' }, code: 'Space', class: 'key key_space' },
     {
-      key: { ru: 'Alt', en: 'Alt' }, code: 'AltRight', class: 'key key_rightalt', noType: true,
+      key: { ru: 'Alt', en: 'Alt' }, code: 'AltRight', class: 'key key_rightalt',
     },
     {
-      key: { ru: '◄', en: '◄' }, code: 'ArrowLeft', noType: true, class: 'key',
+      key: { ru: '◄', en: '◄' }, code: 'ArrowLeft', class: 'key',
     },
     {
-      key: { ru: '▼', en: '▼' }, code: 'ArrowDown', noType: true, class: 'key',
+      key: { ru: '▼', en: '▼' }, code: 'ArrowDown', class: 'key',
     },
     {
-      key: { ru: '►', en: '►' }, code: 'ArrowRight', noType: true, class: 'key',
+      key: { ru: '►', en: '►' }, code: 'ArrowRight', class: 'key',
     },
     {
-      key: { ru: 'Cntrl', en: 'Cntrl' }, code: 'ControlRight', class: 'key key_rightctrl', noType: true,
+      key: { ru: 'Cntrl', en: 'Cntrl' }, code: 'ControlRight', class: 'key key_rightctrl',
     },
   ],
 ];

@@ -26,16 +26,26 @@ class KeyBoard extends Control {
           if (textContent.length === 1) {
             if (cursor === str.value.length) {
               this.textarea.element.value += textContent;
-            } else {
+            } else if (cursor === cursorEnd) {
               cursor += 1;
               this.textarea.element.value = `${strLeft}${textContent}${strRight}`;
+              str.setSelectionRange(cursor, cursor);
+            } else {
+              cursor += 1;
+              this.textarea.element.value = `${strLeft}${textContent}${strRight.slice(cursorEnd - cursor + 1)}`;
               str.setSelectionRange(cursor, cursor);
             }
           }
           if (el.code === 'Enter') {
-            cursor += 1;
-            this.textarea.element.value = `${strLeft}\n${strRight}`;
-            str.setSelectionRange(cursor, cursor);
+            if (cursor === cursorEnd) {
+              cursor += 1;
+              this.textarea.element.value = `${strLeft}\n${strRight}`;
+              str.setSelectionRange(cursor, cursor);
+            } else {
+              cursor += 1;
+              this.textarea.element.value = `${strLeft}\n${strRight.slice(cursorEnd - cursor + 1)}`;
+              str.setSelectionRange(cursor, cursor);
+            }
           }
 
           if (el.code === 'Backspace') {
@@ -61,9 +71,15 @@ class KeyBoard extends Control {
           }
 
           if (el.code === 'Tab') {
-            cursor += 4;
-            this.textarea.element.value = `${strLeft}    ${strRight}`;
-            str.setSelectionRange(cursor, cursor);
+            if (cursor === cursorEnd) {
+              cursor += 4;
+              this.textarea.element.value = `${strLeft}    ${strRight}`;
+              str.setSelectionRange(cursor, cursor);
+            } else {
+              cursor += 4;
+              this.textarea.element.value = `${strLeft}    ${strRight.slice(cursorEnd - cursor + 4)}`;
+              str.setSelectionRange(cursor, cursor);
+            }
           }
           if (event.target.classList.contains('key_capslock')) {
             element.classList.toggle('capslk');
@@ -82,7 +98,7 @@ class KeyBoard extends Control {
         });
         document.addEventListener('keydown', (event) => {
           let cursor = this.textarea.element.selectionStart;
-
+          const cursorEnd = this.textarea.element.selectionEnd;
           const str = this.textarea.element;
           const strLeft = this.textarea.element.value.slice(0, cursor);
           const strRight = this.textarea.element.value.slice(cursor);
@@ -95,27 +111,27 @@ class KeyBoard extends Control {
             event.preventDefault();
             if (cursor === str.value.length) {
               this.textarea.element.value += element.textContent;
-            } else {
+            } if (cursor === cursorEnd) {
               cursor += 1;
               this.textarea.element.value = `${strLeft}${element.textContent}${strRight}`;
+              str.setSelectionRange(cursor, cursor);
+            } else {
+              cursor += 1;
+              this.textarea.element.value = `${strLeft}${element.textContent}${strRight.slice(cursorEnd - cursor + 1)}`;
               str.setSelectionRange(cursor, cursor);
             }
           }
           if (event.code === 'Tab' && el.code === 'Tab') {
             event.preventDefault();
-            cursor += 4;
-            this.textarea.element.value = `${strLeft}    ${strRight}`;
-            str.setSelectionRange(cursor, cursor);
-          }
-          if ((event.code === 'ArrowUp' && el.code === 'ArrowUp')
-             || (event.code === 'ArrowLeft' && el.code === 'ArrowLeft')
-             || (event.code === 'ArrowDown' && el.code === 'ArrowDown')
-             || (event.code === 'ArrowRight' && el.code === 'ArrowRight')) {
-            event.preventDefault();
-            cursor += 1;
-
-            this.textarea.element.value = `${strLeft}${element.textContent}${strRight}`;
-            str.setSelectionRange(cursor, cursor);
+            if (cursor === str.value.length) {
+              cursor += 4;
+              this.textarea.element.value = `${strLeft}    ${strRight}`;
+              str.setSelectionRange(cursor, cursor);
+            } else {
+              cursor += 4;
+              this.textarea.element.value = `${strLeft}    ${strRight.slice(cursorEnd - cursor + 4)}`;
+              str.setSelectionRange(cursor, cursor);
+            }
           }
           if (event.code === 'CapsLock' && el.code === 'CapsLock') {
             element.classList.toggle('capslk');
