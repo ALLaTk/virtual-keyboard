@@ -1,9 +1,8 @@
 const changeUppercase = () => {
   const btnKeys = [...document.querySelectorAll('.key')];
-  const btnKey = document.querySelector('.keyboard');
   const caps = document.querySelector('.key_capslock');
 
-  btnKey.addEventListener('click', () => {
+  document.addEventListener('click', () => {
     btnKeys.forEach((el) => {
       const elem = el;
       if (elem.textContent.length === 1) {

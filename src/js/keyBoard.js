@@ -25,15 +25,31 @@ class KeyBoard extends Control {
 
           if (textContent.length === 1) {
             if (cursor === str.value.length) {
-              this.textarea.element.value += textContent;
+              if (document.getElementsByClassName('capslk').length === 1) {
+                this.textarea.element.value += textContent.toUpperCase();
+              } else {
+                this.textarea.element.value += textContent;
+              }
             } else if (cursor === cursorEnd) {
-              cursor += 1;
-              this.textarea.element.value = `${strLeft}${textContent}${strRight}`;
-              str.setSelectionRange(cursor, cursor);
-            } else {
-              cursor += 1;
-              this.textarea.element.value = `${strLeft}${textContent}${strRight.slice(cursorEnd - cursor + 1)}`;
-              str.setSelectionRange(cursor, cursor);
+              if (document.getElementsByClassName('capslk').length === 1) {
+                cursor += 1;
+                this.textarea.element.value = `${strLeft}${textContent.toUpperCase()}${strRight}`;
+                str.setSelectionRange(cursor, cursor);
+              } else {
+                cursor += 1;
+                this.textarea.element.value = `${strLeft}${textContent}${strRight}`;
+                str.setSelectionRange(cursor, cursor);
+              }
+            } else if (cursor !== cursorEnd) {
+              if (document.getElementsByClassName('capslk').length === 1) {
+                cursor += 1;
+                this.textarea.element.value = `${strLeft}${textContent.toUpperCase()}${strRight.slice(cursorEnd - cursor + 1)}`;
+                str.setSelectionRange(cursor, cursor);
+              } else {
+                cursor += 1;
+                this.textarea.element.value = `${strLeft}${textContent}${strRight.slice(cursorEnd - cursor + 1)}`;
+                str.setSelectionRange(cursor, cursor);
+              }
             }
           }
           if (el.code === 'Enter') {
